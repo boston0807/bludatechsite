@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BLUEDATECH</title>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="assets/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- HEADER -->
+<div class="header">
+    <div class="logo-area">
+        <div class="logo-text">
+            <h1>บริษัท บลูด้าเทค เซล แอนด์ เซอร์วิส จำกัด</h1>
+            <p>BLUEDATECH SALE AND SERVICES COMPANY LIMITED</p>
+        </div>
+    </div>
+    <div class="header-contact">
+        <span>📞</span> 097-289-4549 &nbsp;|&nbsp; 081-XXX-XXXX
+    </div>
+</div>
+ 
+<!-- TABS -->
+<div class="tabs">
+    <button class="tabButton active" onclick="openTab('home', event)">หน้าแรก</button>
+    <button class="tabButton" onclick="openTab('about', event)">เกี่ยวกับเรา</button>
+    <button class="tabButton" onclick="openTab('services', event)">บริการของเรา</button>
+    <button class="tabButton" onclick="openTab('contact', event)">ติดต่อเรา</button>
+</div>
+ 
+<!-- ═══════════════ HOME ═══════════════ -->
+<div id="home" class="tabContent active">
+ 
+    <div class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">✦ ผู้เชี่ยวชาญด้านลิฟต์ครบวงจร</div>
+            <h2>ซ่อม ติดตั้ง<br><span>ลิฟต์โดยสาร</span><br>มืออาชีพ</h2>
+            <p>บริการครบวงจรทั้งการติดตั้งใหม่ ซ่อมบำรุง และดูแลระบบลิฟต์ทุกประเภท ด้วยทีมช่างผู้ชำนาญการที่ได้รับการรับรองมาตรฐาน</p>
+            <button class="hero-cta" onclick="openTab('services', {currentTarget: document.querySelectorAll('.tabButton')[3]})">บริการของเรา →</button>
+        </div>
+        <div class="hero-lines">
+            <div class="hero-line"></div>
+            <div class="hero-line"></div>
+            <div class="hero-line"></div>
+            <div class="hero-line"></div>
+            <div class="hero-line"></div>
+        </div>
+    </div>
+ 
+    <div class="stats-bar">
+        <div class="stat-item">
+            <div class="stat-number">20<span>+</span></div>
+            <div class="stat-label">ปีประสบการณ์</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">500<span>+</span></div>
+            <div class="stat-label">โปรเจกต์ที่สำเร็จ</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">24<span>/7</span></div>
+            <div class="stat-label">บริการฉุกเฉิน</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">77</div>
+            <div class="stat-label">จังหวัดทั่วไทย</div>
+        </div>
+    </div>
+ 
+    <div class="section">
+        <div class="section-header">
+            <div class="section-title">บริการ<span>หลัก</span>ของเรา</div>
+            <div class="section-line"></div>
+        </div>
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">🏗️</div>
+                <div class="card-body">
+                    <h3>ติดตั้งลิฟต์ใหม่</h3>
+                    <p>รับติดตั้งลิฟต์โดยสาร ลิฟต์สินค้า และลิฟต์บ้านพักอาศัย พร้อมการรับประกันคุณภาพงานทุกโครงการ</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔧</div>
+                <div class="card-body">
+                    <h3>ซ่อมบำรุงลิฟต์</h3>
+                    <p>ทีมช่างพร้อมให้บริการซ่อมลิฟต์ทุกยี่ห้อ ทุกรุ่น ด้วยอะไหล่แท้และเทคโนโลยีการวินิจฉัยที่ทันสมัย</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon">⚙️</div>
+                <div class="card-body">
+                    <h3>บำรุงรักษาประจำ</h3>
+                    <p>แพ็กเกจดูแลรักษาลิฟต์รายเดือน/รายปี ตรวจเช็คระบบอย่างละเอียด ป้องกันปัญหาก่อนเกิด</p>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="why-section">
+        <div class="section-header">
+            <div class="section-title" style="color:white;">ทำไมต้อง<span style="color:var(--gold);">เลือกเรา</span></div>
+            <div class="section-line" style="background: linear-gradient(to right, var(--gold), transparent);"></div>
+        </div>
+        <div class="why-grid">
+            <div class="why-item">
+                <div class="why-icon">🏆</div>
+                <h3>มาตรฐานสากล</h3>
+                <p>ได้รับการรับรองมาตรฐาน มอก. และ ISO 9001 ทุกขั้นตอนการทำงาน</p>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">⚡</div>
+                <h3>ตอบสนองรวดเร็ว</h3>
+                <p>บริการฉุกเฉิน 24 ชั่วโมง 7 วัน ทีมช่างพร้อมเดินทางภายใน 2 ชั่วโมง</p>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">💰</div>
+                <h3>ราคาโปร่งใส</h3>
+                <p>ใบเสนอราคาชัดเจน ไม่มีค่าใช้จ่ายซ่อน รับประกันราคาดีที่สุด</p>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">🛡️</div>
+                <h3>รับประกันงาน</h3>
+                <p>รับประกันงานซ่อมและติดตั้งทุกชิ้นงาน พร้อมบริการหลังการขาย</p>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+ 
+<!-- ═══════════════ ABOUT ═══════════════ -->
+<div id="about" class="tabContent">
+ 
+    <div class="about-hero">
+        <div class="about-hero-text">
+            <h2>ประสบการณ์กว่า<br><span>20 ปี</span><br>ในวงการลิฟต์ไทย</h2>
+            <p>บริษัท ลิฟต์ไทย เซอร์วิส จำกัด ก่อตั้งขึ้นด้วยความมุ่งมั่นในการให้บริการด้านลิฟต์ที่ได้มาตรฐานสากลแก่ลูกค้าชาวไทย เราเชื่อมั่นในคุณภาพ ความปลอดภัย และความซื่อสัตย์ต่อลูกค้าทุกราย</p>
+        </div>
+        <div class="about-visual">
+            <div class="big-num">20</div>
+            <div class="big-label">ปีแห่งความไว้วางใจ</div>
+        </div>
+    </div>
+ 
+    <div class="about-section">
+        <div class="section-title">วิสัยทัศน์ & <span>พันธกิจ</span></div>
+        <div class="about-cols">
+            <div class="about-block">
+                <h3>🎯 วิสัยทัศน์</h3>
+                <p>เป็นผู้นำด้านบริการลิฟต์ที่ได้รับความเชื่อถือสูงสุดในประเทศไทย ด้วยการนำเทคโนโลยีที่ทันสมัยมาผสมผสานกับความเชี่ยวชาญของบุคลากร เพื่อให้ลูกค้าได้รับความปลอดภัยและความสะดวกสบายสูงสุด</p>
+            </div>
+            <div class="about-block">
+                <h3>💡 พันธกิจ</h3>
+                <p>มุ่งมั่นให้บริการด้านลิฟต์ครบวงจรด้วยทีมช่างผู้เชี่ยวชาญที่ได้รับการฝึกอบรมตามมาตรฐานสากล ใช้อุปกรณ์และวัสดุคุณภาพสูง พร้อมให้บริการตรงเวลาและโปร่งใสในเรื่องราคา</p>
+            </div>
+            <div class="about-block">
+                <h3>👥 ทีมงานของเรา</h3>
+                <p>ทีมวิศวกรและช่างผู้ชำนาญการกว่า 50 คน ทุกคนได้รับการรับรองจากกรมสวัสดิการและคุ้มครองแรงงาน และผ่านการฝึกอบรมจากผู้ผลิตลิฟต์ชั้นนำของโลก อาทิ OTIS, Schindler, KONE และ Mitsubishi</p>
+            </div>
+            <div class="about-block">
+                <h3>📜 การรับรอง</h3>
+                <p>ได้รับใบอนุญาตประกอบกิจการโรงงาน ใบรับรอง ISO 9001:2015 มาตรฐาน มอก. 370 และเป็นสมาชิกสมาคมผู้ประกอบการลิฟต์และบันไดเลื่อนไทย (TELA)</p>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="timeline">
+        <div class="section-title">ประวัติ<span>บริษัท</span></div>
+        <div class="timeline-items">
+            <div class="tl-item">
+                <div class="tl-year">2004</div>
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                    <h4>ก่อตั้งบริษัท</h4>
+                    <p>เริ่มกิจการด้วยทีมช่าง 5 คน รับงานซ่อมบำรุงลิฟต์ในกรุงเทพฯ</p>
+                </div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-year">2008</div>
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                    <h4>ขยายธุรกิจ</h4>
+                    <p>เปิดตัวบริการติดตั้งลิฟต์ใหม่ และขยายทีมงานเป็น 20 คน</p>
+                </div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-year">2013</div>
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                    <h4>รับรอง ISO 9001</h4>
+                    <p>ได้รับการรับรองมาตรฐานสากล ISO 9001:2008 เป็นครั้งแรก</p>
+                </div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-year">2018</div>
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                    <h4>ขยายทั่วประเทศ</h4>
+                    <p>เปิดสำนักงานสาขาในจังหวัดเชียงใหม่ ชลบุรี และนครราชสีมา</p>
+                </div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-year">2024</div>
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                    <h4>ก้าวสู่ปีที่ 20</h4>
+                    <p>ให้บริการแล้วกว่า 500 โครงการ ด้วยทีมงานกว่า 50 คนทั่วประเทศ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+ 
+<!-- ═══════════════ SERVICES ═══════════════ -->
+<div id="services" class="tabContent">
+ 
+    <div class="services-hero">
+        <h2>บริการของเรา</h2>
+        <p>ให้บริการด้านลิฟต์ครบวงจร ตั้งแต่การออกแบบ ติดตั้ง ซ่อมบำรุง จนถึงการดูแลระยะยาว</p>
+    </div>
+ 
+    <div class="services-section">
+ 
+        <div class="service-row">
+            <div class="service-icon-box">🏗️</div>
+            <div class="service-info">
+                <h3>จำหน่ายเเละติดตั้งลิฟต์โดยสาร</h3>
+                <p>รับติดตั้งลิฟต์โดยสารสำหรับอาคารสำนักงาน คอนโดมิเนียม โรงแรม และห้างสรรพสินค้า ทุกขนาดและทุกรุ่น ตั้งแต่ 2 ชั้นขึ้นไป จำหน่ายลิฟต์โดยสาร ระบบราง เลื่อน ทุกชนิด
+พร้อมติดตั้งครบวงจร พร้อมบำรุงรักษาระบบและความปลอดภัยฟรี 3 ปี</p>
+                <div class="feature-tags">
+                    <span class="tag">ลิฟต์ OTIS</span>
+                    <span class="tag">ลิฟต์ Schindler</span>
+                    <span class="tag">ลิฟต์ KONE</span>
+                    <span class="tag">ลิฟต์ Mitsubishi</span>
+                    <span class="tag">ออกแบบพิเศษ</span>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="service-row reverse">
+            <div class="service-icon-box">🔧</div>
+            <div class="service-info">
+                <h3>ซ่อมบำรุงลิฟต์ทุกยี่ห้อ</h3>
+                <p>บริการซ่อมลิฟต์ที่ขัดข้องทุกประเภทโดยทีมช่างผู้เชี่ยวชาญที่มีประสบการณ์พร้อมจัดหา - เปลี่ยนอะไหล่ของอุปกรณ์</p>
+                <div class="feature-tags">
+                    <span class="tag">ฉุกเฉิน 24 ชม.</span>
+                    <span class="tag">อะไหล่แท้</span>
+                    <span class="tag">รับประกันงาน</span>
+                    <span class="tag">ทุกยี่ห้อ</span>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="service-row">
+            <div class="service-icon-box">⚙️</div>
+            <div class="service-info">
+                <h3>บำรุงรักษาประจำ (Maintenance Service)</h3>
+                <p>แพ็กเกจดูแลรักษาลิฟต์รายปี ครอบคลุมการตรวจสอบระบบไฟฟ้า เครื่องกล ความปลอดภัย และทำความสะอาดห้องโดยสาร พร้อมรายงานผลการตรวจสอบทุกครั้ง</p>
+                <div class="feature-tags">
+                    <span class="tag">ตรวจเดือนละครั้ง</span>
+                    <span class="tag">รายงานผล</span>
+                    <span class="tag">ป้องกันปัญหา</span>
+                    <span class="tag">ราคาพิเศษ</span>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="service-row reverse">
+            <div class="service-icon-box">🛗</div>
+            <div class="service-info">
+                <h3>บันไดเลื่อนและรางเลื่อน</h3>
+                <p>รับติดตั้งและซ่อมบำรุงบันไดเลื่อน (Escalator) และทางเดินเลื่อน (Moving Walkway) สำหรับห้างสรรพสินค้า สนามบิน และอาคารสาธารณะ ทุกประเภทและทุกขนาด</p>
+                <div class="feature-tags">
+                    <span class="tag">Escalator</span>
+                    <span class="tag">Moving Walk</span>
+                    <span class="tag">ห้างสรรพสินค้า</span>
+                    <span class="tag">สนามบิน</span>
+                </div>
+            </div>
+        </div>
+ 
+    </div>
+ 
+    <div class="price-section">
+        <div class="section-title">แพ็กเกจ<span>ดูแลรักษา</span></div>
+        <div class="price-cards">
+            <div class="price-card">
+                <h3>แพ็กเกจ Basic</h3>
+                <div class="price"><sup>฿</sup>2,900</div>
+                <p style="font-size:12px;color:#999;">ต่อเดือน / ต่อลิฟต์</p>
+                <ul>
+                    <li>ตรวจสอบระบบเดือนละ 1 ครั้ง</li>
+                    <li>ทำความสะอาดห้องโดยสาร</li>
+                    <li>ตรวจระบบความปลอดภัย</li>
+                    <li>รายงานผลการตรวจสอบ</li>
+                    <li>บริการโทรปรึกษาฟรี</li>
+                </ul>
+                <button class="btn-primary" onclick="openTab('contact', {currentTarget: document.querySelectorAll('.tabButton')[3]})">สอบถามเพิ่มเติม</button>
+            </div>
+            <div class="price-card featured">
+                <div class="featured-badge">⭐ แนะนำ</div>
+                <h3>แพ็กเกจ Pro</h3>
+                <div class="price"><sup>฿</sup>4,900</div>
+                <p style="font-size:12px;color:#999;">ต่อเดือน / ต่อลิฟต์</p>
+                <ul>
+                    <li>ตรวจสอบระบบเดือนละ 2 ครั้ง</li>
+                    <li>ทำความสะอาดทุกส่วน</li>
+                    <li>ตรวจระบบไฟฟ้าและเครื่องกล</li>
+                    <li>เปลี่ยนน้ำมันหล่อลื่น</li>
+                    <li>บริการฉุกเฉินภายใน 4 ชม.</li>
+                    <li>รายงานผลละเอียด</li>
+                </ul>
+                <button class="btn-primary" onclick="openTab('contact', {currentTarget: document.querySelectorAll('.tabButton')[3]})">สอบถามเพิ่มเติม</button>
+            </div>
+            <div class="price-card">
+                <h3>แพ็กเกจ Premium</h3>
+                <div class="price"><sup>฿</sup>7,900</div>
+                <p style="font-size:12px;color:#999;">ต่อเดือน / ต่อลิฟต์</p>
+                <ul>
+                    <li>ตรวจสอบระบบทุกสัปดาห์</li>
+                    <li>ดูแลครบทุกระบบ</li>
+                    <li>ค่าแรงซ่อมฟรีตลอดสัญญา</li>
+                    <li>บริการฉุกเฉินภายใน 2 ชม.</li>
+                    <li>ผู้จัดการงานบัญชีเฉพาะ</li>
+                    <li>ประกันอุบัติเหตุ</li>
+                </ul>
+                <button class="btn-primary" onclick="openTab('contact', {currentTarget: document.querySelectorAll('.tabButton')[3]})">สอบถามเพิ่มเติม</button>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+ 
+<!-- ═══════════════ CONTACT ═══════════════ -->
+<div id="contact" class="tabContent">
+ 
+    <div class="contact-layout">
+        <div class="contact-info">
+            <h2>ติดต่อ<span>เรา</span></h2>
+            <p>พร้อมให้บริการและตอบคำถามทุกข้อสงสัยเกี่ยวกับลิฟต์ของท่าน</p>
+ 
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                    <h4>ที่อยู่</h4>
+                    <p>123/45 ถนนสุขุมวิท แขวงคลองเตย<br>เขตคลองเตย กรุงเทพฯ 10110</p>
+                </div>
+            </div>
+ 
+            <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div>
+                    <h4>โทรศัพท์</h4>
+                    <p>02-XXX-XXXX (สำนักงาน)<br>091-289-4549 (ฉุกเฉิน 24 ชม.)</p>
+                </div>
+            </div>
+ 
+            <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <div>
+                    <h4>อีเมล</h4>
+                    <p>info@liftthai.co.th<br>service@liftthai.co.th</p>
+                </div>
+            </div>
+ 
+            <div class="contact-item">
+                <div class="contact-icon">💬</div>
+                <div>
+                    <h4>LINE Official</h4>
+                    <p>@liftthai_service</p>
+                </div>
+            </div>
+ 
+            <div class="hours-grid">
+                <div class="hour-item">
+                    <strong>จันทร์ – ศุกร์</strong>
+                    08:00 – 18:00 น.
+                </div>
+                <div class="hour-item">
+                    <strong>เสาร์</strong>
+                    08:00 – 16:00 น.
+                </div>
+                <div class="hour-item">
+                    <strong>อาทิตย์</strong>
+                    ปิดทำการ
+                </div>
+                <div class="hour-item">
+                    <strong>ฉุกเฉิน</strong>
+                    24 ชม. ทุกวัน
+                </div>
+            </div>
+        </div>
+
+    </div>
+ 
+</div>
+ 
+<!-- FOOTER -->
+<div class="footer">
+    © 2024 <span>บริษัท ลิฟต์ไทย เซอร์วิส จำกัด</span> | สงวนลิขสิทธิ์ทุกประการ
+</div>
+<script src="script.js"></script>
+</body>
+</html>
