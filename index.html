@@ -13,11 +13,13 @@
 <!-- HEADER -->
 <div class="header">
     <div class="logo-area">
+        <img src= "assets/logonobg.png" class= "logo">
         <div class="logo-text">
             <h1>บริษัท บลูด้าเทค เซล แอนด์ เซอร์วิส จำกัด</h1>
             <p>BLUEDATECH SALE AND SERVICES COMPANY LIMITED</p>
         </div>
     </div>
+
     <div class="header-contact">
         <span>📞</span> 097-289-4549 &nbsp;|&nbsp; 081-XXX-XXXX
     </div>
@@ -76,21 +78,21 @@
         </div>
         <div class="cards-grid">
             <div class="card">
-                <div class="card-icon">🏗️</div>
+                <div class="card-picture"><img src="assets/ติดตั้ง.jpg" alt=""><img src="assets/ออกเเบบ.jpg" alt=""></div>
                 <div class="card-body">
                     <h3>ติดตั้งลิฟต์ใหม่</h3>
                     <p>รับติดตั้งลิฟต์โดยสาร ลิฟต์สินค้า และลิฟต์บ้านพักอาศัย พร้อมการรับประกันคุณภาพงานทุกโครงการ</p>
                 </div>
             </div>
             <div class="card">
-                <div class="card-icon">🔧</div>
+                <div class="card-picture"><img src="assets/ซ่อมบำรุง.jpg" alt=""><img src="assets/ซ่อมบำรุงสอง.jpg" alt=""></div>
                 <div class="card-body">
                     <h3>ซ่อมบำรุงลิฟต์</h3>
                     <p>ทีมช่างพร้อมให้บริการซ่อมลิฟต์ทุกยี่ห้อ ทุกรุ่น ด้วยอะไหล่แท้และเทคโนโลยีการวินิจฉัยที่ทันสมัย</p>
                 </div>
             </div>
             <div class="card">
-                <div class="card-icon">⚙️</div>
+                <div class="card-picture"><img src="assets/service1.png" alt=""><img src="assets/service2.jpg" alt=""></div>
                 <div class="card-body">
                     <h3>บำรุงรักษาประจำ</h3>
                     <p>แพ็กเกจดูแลรักษาลิฟต์รายเดือน/รายปี ตรวจเช็คระบบอย่างละเอียด ป้องกันปัญหาก่อนเกิด</p>
@@ -113,7 +115,7 @@
             <div class="why-item">
                 <div class="why-icon">⚡</div>
                 <h3>ตอบสนองรวดเร็ว</h3>
-                <p>บริการฉุกเฉิน 24 ชั่วโมง 7 วัน ทีมช่างพร้อมเดินทางภายใน 2 ชั่วโมง</p>
+                <p>บริการฉุกเฉิน 24 ชั่วโมง 7 วัน ทีมช่างพร้อมเดินทางภายใน 24 ชั่วโมง</p>
             </div>
             <div class="why-item">
                 <div class="why-icon">💰</div>
@@ -284,53 +286,6 @@
  
     </div>
  
-    <div class="price-section">
-        <div class="section-title">แพ็กเกจ<span>ดูแลรักษา</span></div>
-        <div class="price-cards">
-            <div class="price-card">
-                <h3>แพ็กเกจ Basic</h3>
-                <div class="price"><sup>฿</sup>2,900</div>
-                <p style="font-size:12px;color:#999;">ต่อเดือน / ต่อลิฟต์</p>
-                <ul>
-                    <li>ตรวจสอบระบบเดือนละ 1 ครั้ง</li>
-                    <li>ทำความสะอาดห้องโดยสาร</li>
-                    <li>ตรวจระบบความปลอดภัย</li>
-                    <li>รายงานผลการตรวจสอบ</li>
-                    <li>บริการโทรปรึกษาฟรี</li>
-                </ul>
-                <button class="btn-primary" onclick="openTab('contact', {currentTarget: document.querySelectorAll('.tabButton')[3]})">สอบถามเพิ่มเติม</button>
-            </div>
-            <div class="price-card featured">
-                <div class="featured-badge">⭐ แนะนำ</div>
-                <h3>แพ็กเกจ Pro</h3>
-                <div class="price"><sup>฿</sup>4,900</div>
-                <p style="font-size:12px;color:#999;">ต่อเดือน / ต่อลิฟต์</p>
-                <ul>
-                    <li>ตรวจสอบระบบเดือนละ 2 ครั้ง</li>
-                    <li>ทำความสะอาดทุกส่วน</li>
-                    <li>ตรวจระบบไฟฟ้าและเครื่องกล</li>
-                    <li>เปลี่ยนน้ำมันหล่อลื่น</li>
-                    <li>บริการฉุกเฉินภายใน 4 ชม.</li>
-                    <li>รายงานผลละเอียด</li>
-                </ul>
-                <button class="btn-primary" onclick="openTab('contact', {currentTarget: document.querySelectorAll('.tabButton')[3]})">สอบถามเพิ่มเติม</button>
-            </div>
-            <div class="price-card">
-                <h3>แพ็กเกจ Premium</h3>
-                <div class="price"><sup>฿</sup>7,900</div>
-                <p style="font-size:12px;color:#999;">ต่อเดือน / ต่อลิฟต์</p>
-                <ul>
-                    <li>ตรวจสอบระบบทุกสัปดาห์</li>
-                    <li>ดูแลครบทุกระบบ</li>
-                    <li>ค่าแรงซ่อมฟรีตลอดสัญญา</li>
-                    <li>บริการฉุกเฉินภายใน 2 ชม.</li>
-                    <li>ผู้จัดการงานบัญชีเฉพาะ</li>
-                    <li>ประกันอุบัติเหตุ</li>
-                </ul>
-                <button class="btn-primary" onclick="openTab('contact', {currentTarget: document.querySelectorAll('.tabButton')[3]})">สอบถามเพิ่มเติม</button>
-            </div>
-        </div>
-    </div>
  
 </div>
  
