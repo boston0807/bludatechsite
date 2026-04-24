@@ -16,6 +16,8 @@ body {
     background: var(--light);
     color: var(--navy);
     overflow-x: hidden;
+    font-size: 22px; 
+    line-height: 1.7;
 }
 
 /* ─── HEADER ─── */
@@ -41,14 +43,14 @@ body {
 
 .logo-text h1 {
     font-family: 'Kanit', sans-serif;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 600;
     color: var(--white);
     letter-spacing: 1px;
 }
 
 .logo-text p {
-    font-size: 22px;
+    font-size: 24px;
     color: var(--gold);
     font-weight: 300;
     letter-spacing: 2px;
@@ -66,7 +68,7 @@ body {
     gap: 8px;
     color: var(--gold);
     font-family: 'Kanit', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     white-space: nowrap;
 }
@@ -91,7 +93,7 @@ body {
     background: transparent;
     color: rgba(255,255,255,0.7);
     cursor: pointer;
-    font-size: 15px;
+    font-size: 18px;
     font-family: 'Kanit', sans-serif;
     font-weight: 300;
     letter-spacing: 0.5px;
@@ -194,10 +196,8 @@ body {
 
 .hero h2 {
     font-family: 'Kanit', sans-serif;
-    font-size: 52px;
+    font-size: 68px;
     font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 20px;
 }
 
 .hero h2 span { color: var(--gold); }
@@ -277,10 +277,7 @@ body {
 
 .section-title {
     font-family: 'Kanit', sans-serif;
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--navy);
-    line-height: 1.1;
+    font-size: 44px;
 }
 
 .section-title span { color: var(--gold); }
@@ -313,14 +310,14 @@ body {
     border-top-color: var(--gold);
 }
 
-.card-picture{
-    display:flex;
+.card-picture {
+    display: flex;
 }
 
-.card-picture img{
-    width:50%;
-    height:200px;
-    object-fit:cover;
+.card-picture img {
+    width: 50%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .card-icon {
@@ -341,7 +338,7 @@ body {
 }
 
 .card-body p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.7;
     color: var(--gray);
 }
@@ -398,7 +395,7 @@ body {
 
 .about-hero-text h2 {
     font-family: 'Kanit', sans-serif;
-    font-size: 42px;
+    font-size: 50px;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 20px;
@@ -534,10 +531,7 @@ body {
 }
 
 .services-hero h2 {
-    font-family: 'Kanit', sans-serif;
-    font-size: 44px;
-    font-weight: 700;
-    color: var(--gold);
+    font-size: 54px;
 }
 
 .services-hero p {
@@ -548,30 +542,79 @@ body {
     line-height: 1.8;
 }
 
-.services-section { padding: 60px 80px; background: white; }
-
-.service-row {
+/* ── SERVICE ROWS (ใหม่) ── */
+.services-section {
+    padding: 60px 80px;
+    background: white;
     display: flex;
-    gap: 50px;
-    align-items: center;
-    padding: 50px 0;
-    border-bottom: 1px solid #eee;
+    flex-direction: column;
+    gap: 0;
 }
 
-.service-row:last-child { border-bottom: none; }
-.service-row.reverse { flex-direction: row-reverse; }
-
-.service-icon-box {
-    width: 180px;
-    height: 180px;
-    flex-shrink: 0;
-    background: var(--light-blue);
+.service-row {
+    display: grid;
+    grid-template-columns: 480px 1fr;   /* รูปกว้าง 480px ข้อความส่วนที่เหลือ */
+    gap: 0;
+    align-items: stretch;
+    border-bottom: 1px solid #eee;
     border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.service-row:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.service-row:hover {
+    box-shadow: 0 12px 40px rgba(0,0,0,0.13);
+    transform: translateY(-4px);
+}
+
+/* แถวคู่ — รูปสลับไปขวา */
+.service-row.reverse {
+    grid-template-columns: 1fr 480px;
+}
+
+.service-row.reverse .service-picture-box {
+    order: 2;
+}
+
+.service-row.reverse .service-info {
+    order: 1;
+}
+
+/* กล่องรูป */
+.service-picture-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    overflow: hidden;
+    min-height: 320px;
+}
+
+.service-picture-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.service-row:hover .service-picture-box img {
+    transform: scale(1.04);
+}
+
+/* กล่องข้อความ */
+.service-info {
+    padding: 44px 48px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    font-size: 72px;
-    border: 2px solid rgba(26,58,107,0.1);
+    background: var(--white);
 }
 
 .service-info h3 {
@@ -580,13 +623,15 @@ body {
     font-weight: 700;
     color: var(--navy);
     margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 3px solid var(--gold);
 }
 
 .service-info p {
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.9;
     color: #555;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .feature-tags {
@@ -598,87 +643,12 @@ body {
 .tag {
     background: var(--light-blue);
     color: var(--blue);
-    padding: 5px 14px;
+    padding: 6px 16px;
     border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-    font-family: 'Kanit', sans-serif;
-}
-
-.featured-badge {
-    position: absolute;
-    top: -12px; left: 50%;
-    transform: translateX(-50%);
-    background: var(--gold);
-    color: var(--navy);
-    font-family: 'Kanit', sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    padding: 4px 16px;
-    border-radius: 20px;
-    letter-spacing: 1px;
-    white-space: nowrap;
-}
-
-.price-card h3 {
-    font-family: 'Kanit', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--navy);
-    margin-bottom: 8px;
-}
-
-.price-card .price {
-    font-family: 'Kanit', sans-serif;
-    font-size: 40px;
-    font-weight: 700;
-    color: var(--gold);
-    margin: 16px 0;
-}
-
-.price-card .price sup { font-size: 20px; }
-
-.price-card ul {
-    list-style: none;
-    text-align: left;
-    margin: 20px 0;
-}
-
-.price-card ul li {
     font-size: 13px;
-    padding: 7px 0;
-    border-bottom: 1px solid #f0f0f0;
-    color: #555;
-    display: flex;
-    gap: 8px;
-    align-items: center;
-}
-
-.price-card ul li::before {
-    content: '✓';
-    color: var(--gold);
-    font-weight: 700;
-    flex-shrink: 0;
-}
-
-.btn-primary {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    background: var(--blue);
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-family: 'Kanit', sans-serif;
-    font-size: 14px;
     font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s;
+    font-family: 'Kanit', sans-serif;
 }
-
-.btn-primary:hover { background: var(--navy); }
-.price-card.featured .btn-primary { background: var(--gold); color: var(--navy); }
-.price-card.featured .btn-primary:hover { background: #f0c030; }
 
 /* ─── CONTACT ─── */
 .contact-layout {
@@ -737,7 +707,7 @@ body {
     margin-bottom: 4px;
 }
 
-.contact-item p { font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.5; }
+.contact-item p { font-size: 17px; color: rgba(255,255,255,0.85); line-height: 1.5; }
 
 .hours-grid {
     display: grid;
@@ -761,23 +731,39 @@ body {
     margin-bottom: 2px;
 }
 
-.contact-form {
+.social-section {
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.social-section h4 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 12px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 16px;
+}
+
+.social-link {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.social-link:hover { color: var(--gold); }
+
+/* Form (อยู่ใน contact-layout column ขวา) */
+form {
     background: white;
     padding: 70px 60px;
-}
-
-.contact-form h2 {
-    font-family: 'Kanit', sans-serif;
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: var(--navy);
-}
-
-.contact-form > p {
-    font-size: 14px;
-    color: var(--gray);
-    margin-bottom: 32px;
 }
 
 .form-row {
@@ -843,7 +829,6 @@ body {
 .form-submit:hover { background: var(--blue); transform: translateY(-2px); }
 
 .success-msg {
-    display: none;
     background: #e8f5e9;
     border: 1px solid #4caf50;
     color: #2e7d32;
@@ -857,10 +842,10 @@ body {
 /* ─── FOOTER ─── */
 .footer {
     background: #050e1c;
-    color: rgba(255,255,255,0.4);
+    color: white;
     text-align: center;
     padding: 24px;
-    font-size: 13px;
+    font-size: 14px;
     border-top: 1px solid rgba(200,150,10,0.2);
 }
 
@@ -871,6 +856,7 @@ body {
    RESPONSIVE — TABLET  (max-width: 900px)
 ══════════════════════════════════════════ */
 @media (max-width: 900px) {
+    body { font-size:20px; }
     .header { padding: 0 24px; height: 70px; }
     .logo-text h1 { font-size: 16px; }
     .logo-text p  { display: none; }
@@ -883,9 +869,6 @@ body {
     .hero h2 { font-size: 38px; }
     .hero p   { font-size: 15px; }
     .hero-lines { right: 30px; }
-    .hero-line:nth-child(3) { height: 200px; }
-    .hero-line:nth-child(2), .hero-line:nth-child(4) { height: 140px; }
-    .hero-line:nth-child(1), .hero-line:nth-child(5) { height: 90px; }
 
     .stats-bar { grid-template-columns: repeat(2, 1fr); }
     .stat-item { padding: 20px; }
@@ -912,14 +895,25 @@ body {
     .services-hero { padding: 50px 40px; }
     .services-hero h2 { font-size: 32px; }
     .services-section { padding: 40px; }
-    .service-row, .service-row.reverse { flex-direction: column; gap: 28px; padding: 36px 0; }
-    .service-icon-box { width: 120px; height: 120px; font-size: 48px; align-self: flex-start; }
 
-    .price-section { padding: 50px 40px; }
-    .price-cards { grid-template-columns: 1fr; max-width: 420px; margin-inline: auto; }
+    /* service-row tablet */
+    .service-row,
+    .service-row.reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .service-row.reverse .service-picture-box { order: 0; }
+    .service-row.reverse .service-info        { order: 0; }
+
+    .service-picture-box {
+        min-height: 240px;
+    }
+
+    .service-info { padding: 32px 36px; }
 
     .contact-layout { grid-template-columns: 1fr; }
     .contact-info { padding: 50px 40px; }
+    form { padding: 50px 40px; }
 }
 
 
@@ -927,7 +921,7 @@ body {
    RESPONSIVE — MOBILE  (max-width: 600px)
 ══════════════════════════════════════════ */
 @media (max-width: 600px) {
-    /* Header */
+    body { font-size:18px; }
     .header {
         padding: 0 16px;
         height: auto;
@@ -938,11 +932,9 @@ body {
     .header-contact { font-size: 13px; gap: 4px; }
     .header-contact span { font-size: 15px; }
 
-    /* Tabs */
     .tabs { padding: 0 8px; }
     .tabButton { padding: 12px 14px; font-size: 13px; }
 
-    /* Hero */
     .hero {
         padding: 44px 20px 56px;
         min-height: auto;
@@ -955,27 +947,23 @@ body {
     .hero-badge { font-size: 10px; letter-spacing: 2px; padding: 5px 12px; }
     .hero-cta { font-size: 14px; padding: 12px 24px; width: 100%; justify-content: center; }
 
-    /* Stats */
     .stats-bar { grid-template-columns: 1fr 1fr; }
     .stat-item { padding: 16px 12px; border-right: none; border-bottom: 1px solid #e8e8e8; }
-    .stat-item:nth-child(odd)      { border-right: 1px solid #e8e8e8; }
-    .stat-item:nth-last-child(-n+2){ border-bottom: none; }
+    .stat-item:nth-child(odd)       { border-right: 1px solid #e8e8e8; }
+    .stat-item:nth-last-child(-n+2) { border-bottom: none; }
     .stat-number { font-size: 28px; }
     .stat-label  { font-size: 11px; }
 
-    /* Section */
     .section { padding: 40px 20px; }
     .section-header { flex-direction: column; align-items: flex-start; gap: 8px; margin-bottom: 28px; }
     .section-title { font-size: 24px; }
     .section-line { display: none; }
 
-    /* Cards */
     .cards-grid { grid-template-columns: 1fr; gap: 16px; }
     .card-icon { padding: 24px; font-size: 36px; }
     .card-body { padding: 20px; }
     .card-body h3 { font-size: 17px; }
 
-    /* Why */
     .why-section { padding: 40px 20px; }
     .why-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
     .why-item { padding: 18px 10px; }
@@ -983,7 +971,6 @@ body {
     .why-item h3 { font-size: 14px; }
     .why-item p  { font-size: 12px; }
 
-    /* About hero */
     .about-hero {
         padding: 40px 20px;
         flex-direction: column;
@@ -997,13 +984,11 @@ body {
     .about-visual .big-num   { font-size: 48px; }
     .about-visual .big-label { font-size: 11px; letter-spacing: 1px; }
 
-    /* About section */
     .about-section { padding: 40px 20px; }
     .about-cols { grid-template-columns: 1fr; gap: 24px; margin-top: 24px; }
     .about-block h3 { font-size: 18px; }
     .about-block p  { font-size: 14px; }
 
-    /* Timeline */
     .timeline { padding: 40px 20px; }
     .timeline-items::before { left: 48px; }
     .tl-item { gap: 18px; }
@@ -1011,29 +996,28 @@ body {
     .tl-content h4 { font-size: 15px; }
     .tl-content p  { font-size: 13px; }
 
-    /* Services */
     .services-hero { padding: 40px 20px; }
     .services-hero h2 { font-size: 26px; }
     .services-hero p  { font-size: 14px; }
-    .services-section { padding: 24px 20px; }
-    .service-row, .service-row.reverse { gap: 18px; padding: 28px 0; }
-    .service-icon-box { width: 80px; height: 80px; font-size: 34px; border-radius: 12px; }
-    .service-info h3 { font-size: 18px; }
+    .services-section { padding: 24px 20px; gap: 24px; }
+
+    .service-row,
+    .service-row.reverse {
+        grid-template-columns: 1fr;
+        margin-bottom: 24px;
+    }
+
+    .service-picture-box { min-height: 200px; }
+    .service-info { padding: 24px 20px; }
+    .service-info h3 { font-size: 20px; }
     .service-info p  { font-size: 14px; }
     .tag { font-size: 11px; padding: 4px 10px; }
 
-    /* Pricing */
-    .price-section { padding: 40px 20px; }
-    .price-cards { grid-template-columns: 1fr; max-width: 100%; }
-    .price-card { padding: 28px 20px; }
-    .price-card .price { font-size: 34px; }
-
-    /* Contact */
     .contact-layout { grid-template-columns: 1fr; }
     .contact-info { padding: 40px 20px; }
     .contact-info h2 { font-size: 26px; }
     .contact-item p { font-size: 14px; }
+    form { padding: 40px 20px; }
 
-    /* Footer */
     .footer { font-size: 11px; padding: 18px 16px; }
 }
